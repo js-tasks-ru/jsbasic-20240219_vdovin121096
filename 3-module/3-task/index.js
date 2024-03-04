@@ -1,3 +1,12 @@
 function camelize(str) {
-  // ваш код...
+  return str
+    .split("-")
+    .map((item, index) =>
+      index !== 0 ? item[0].toUpperCase() + item.slice(1) : item
+    )
+    .join("");
 }
+
+camelize("background-color");
+camelize("list-style-image");
+camelize("-webkit-transition");
